@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- SEO meta tags -->
+    <meta name="description" content="Your page description here">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Your Name">
+
+    <!-- Title -->
+    <title>My Website</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="My Website">
+    <meta property="og:description" content="Your page description here">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:image" content="https://example.com/image.jpg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Fonts (optional) -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"
+  
+  > -->
+  
+  <style>
+  body, header, li {
+    margin: 0px;
+    background: rgba(0, 0, 0, 0.98);
+    
+  }
+  .head {
+    display: flex;
+    flex-direction: row;
+    background-color: #D1A574;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    width:100%;
+    margin-top: -1px;
+    z-index: 1;
+  }
+  
+  h1 {
+    color: #AE6152;
+    font-size: 1.3rem;
+    padding-top:5px;
+  font-family: "Noto Sans Bengali", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  }
+  
+  img {
+    height: 80px;
+   /* background: pink;
+    padding-right: 4px;
+    border-right: 4px solid blue;*/
+  }
+  
+  .aut-datetime {
+    padding-top: 80px;
+  }
+  
+  .infinity-slide {
+    background-color: #020F0B;
+    width: 100%;
+    overflow: hidden;
+    padding-top: 2px;
+    position: fixed;
+        z-index: 1;
+  }
+  
+  .date-time {
+    font-size: 1.5rem;
+    display: flex;
+    color: #FCFFFB;
+    white-space: nowrap;
+    animation: scroll-left 15s linear infinite;
+    font-family: "Noto Sans Bengali", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+        
+  }
+  
+    @keyframes scroll-left {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-180%);
+    }
+  }
+  
+  .id-photo {
+    height: 180px;
+    width: 180px;
+    border-radius: 100px;
+  }
+  
+  .out-of {
+    font-size: 1.15rem;
+    text-align: center;
+    color: red;
+    padding-top: 30px;
+  }
+  
+  .background {
+    /*background-image: url('https://i.ibb.co/YFb23KpY/f3b684df-3c94-453b-af13-20d3fc34fd16.jpg') ;*/
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    position: center;
+  }
+  
+  .id-container {
+    background-image: url('https://i.ibb.co/wFChb6pq/IMG-20251027-203024.jpg');
+    text-align: center;
+    align-content: center;
+    padding: 40px 0px;
+    padding-bottom: 15px;
+    margin: 0px 40px;
+    border-top-left-radius: 
+    50px;
+    border-top-right-radius: 50px;
+    border: 10px solid black;
+    border-bottom: none;
+    box-shadow: 0 -1px 10px 0px rgba(255, 255, 255, 0.2);
+  }
+  
+  .cap-2 {
+    color: pink;
+    font-size: 0.8rem;
+    font-family: "Noto Sans Bengali";
+    background: black;
+    border-radius: 50px;
+    padding: 13px 0px;
+    margin: -20px 120px 40px 120px;
+  }
+  
+  .aut-name {
+    font-size: 3.0rem;
+    font-family: Lucida Sans Unicode;
+  }
+  
+  .line {
+    font-size: 0.95rem;
+    font-family: "Noto Sans Bengali", sans-serif;
+    text-align: justify;
+    margin: 25px;
+    margin-top: 10px;
+    
+  }
+  
+  .cap {
+    font-size: 1.5rem;
+    font-family: "Noto Sans Bengali", sans-serif;
+    color: #0D2852;
+    text-align: justify;
+    margin: 25px;
+    margin-left: 10px;
+    margin-bottom: 5px;
+    
+    
+  }
+  
+  .cap:before {
+    content: '❝';
+    margin-right: 5px;
+  }
+  
+  .about {
+    background-color: #E4E6E6;
+    padding: 10px;
+    padding-top: 2px;    
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0px 10px 5px rgb(13,40,95);
+  }
+  
+  details {
+    margin: 25px;
+  }
+  
+  summary {
+     color: white;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    margin: 5px;
+    padding: 20px;
+    list-style: none;
+    text-align: center;
+  }
+  
+  .see-more-container {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.10);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    margin: 5px;
+    padding: 20px;
+    padding-top: 5px;
+  }
+  
+  .det-link {
+    color: white;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+  }
+  
+  a:hover {
+    color: #EBA833;
+  }    
+  .link:hover {
+    text-style: underline;
+    color: #EBA833;
+  }
+  
+  
+  .link:after {
+    display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+   text-align: center;
+  content: '\f0c1';
+  margin: 0px;
+  padding: 5px;
+  font-size: 0.7rem;
+            border-radius: 5px;
+  background-color: #ffffff31;
+  }
+  
+  h5:before {
+    content: '➣';
+    margin-right: 15px;
+  }
+  
+  .app-container {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(10px);
+   -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .content-subject {
+    font-size: 2.1rem;
+    margin: none;
+    margin-bottom: 0px;
+    padding: 20px;
+  }
+  
+  hr {
+    border: none;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .Grid {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+   -webkit-backdrop-filter: blur(5px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    height: auto;
+    padding-bottom: 8px;
+    display: grid;
+    grid-template-rows: 225px 225px;
+    grid-template-columns: 150px 150px 150px;
+    gap: 12.5px;
+    padding: 12.5px;
+    align-self: center;
+    border-radius: 0px;
+    justify-content: center;
+  }
+  
+  /*.app-content {
+    backdrop-filter: blur(25px);
+   -webkit-backdrop-filter: blur(25px);
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding-top: 10px; 
+    background-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(75px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    
+  }*/
+  
+ .a-logo, .app-logo {
+    border-radius: 15px;
+    height: 130px;
+    margin: 5px;
+    margin-bottom: 0px;
+  }
+  
+  
+  .a-logo {
+    text-align: center;
+    margin: 0px;
+  }
+  .app-info {
+    margin: 2px;
+    margin-bottom: 0px;
+    zoom: 100%;
+    
+  }
+  
+  .app-name {
+    font-size:1.2rem;
+    text-align: start;
+    color: white;
+   /* background: blue;*/
+    margin: 5px 5px;
+    font-family: verdana;
+    font-weight: light;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 2px 5px;
+    padding-left: 1px;
+    
+  }
+  
+  li {
+    font-family: monospace;
+    background: none;
+  }
+  .app {
+    backdrop-filter: grayscale(30%);
+    backdrop-filter: blur(25px);
+   -webkit-backdrop-filter: blur(25px);
+   background-color: rgba(255, 255, 255, 0.1);
+    border: 1px rgba(255, 255, 255, 0.2);
+    align-content: center;
+    border-radius: 14.5px;
+    margin: 0px;
+    padding: 5px;
+  }
+  
+  .see-more {
+    height: 15.7vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  footer {
+    backdrop-filter: blur(10px);
+    background-image: url('https://gifdb.com/images/high/lemon-dropping-animation-ycxzi603s8htpcgq.webp');
+    opacity: 0.8;
+    padding: 12px 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 10px 10px;
+    margin-bottom: 0px;
+    padding-bottom: 20px;
+  }
+  
+  .copyright-snipht {
+    text-align: center;
+    font-size: 1.2rem;
+    
+  }
+  
+  h6 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin: 0px;
+  }
+  
+  
+ nav, .foot {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0px 0px;
+    padding: 0px 0px;
+  }
+  .foot-content {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+            justify-content: center;
+    margin: 0px;
+  }
+  
+ .wrapper span {
+	position: fixed;
+	bottom: -100px;
+   border-radius: 100px;
+	height: 20px;
+	width: 20px;
+	z-index: -1;
+	box-shadow: 0 0 50px #EAA82E, 0 0 100px #EAA82E, 0 0 150px #EAA82E, 0 0 200px #EAA82E;
+	animation: animate 10s linear infinite;
+}
+.wrapper span:nth-child(1) {
+	left: 60px;
+	animation-delay: 0.6s;
+}
+.wrapper span:nth-child(2) {
+	left: 10%;
+	animation-delay: 3s;
+	width: 60px;
+	height: 60px;
+}
+.wrapper span:nth-child(3) {
+	left: 20%;
+	animation-delay: 2s;
+}
+.wrapper span:nth-child(4) {
+	left: 30%;
+	animation-delay: 5s;
+	width: 80px;
+	height: 80px;
+}
+.wrapper span:nth-child(5) {
+	left: 40%;
+	animation-delay: 1s;
+}
+.wrapper span:nth-child(6) {
+	left: 50%;
+	animation-delay: 7s;
+}
+.wrapper span:nth-child(7) {
+	left: 60%;
+	animation-delay: 6s;
+	width: 100px;
+	height: 100px;
+}
+.wrapper span:nth-child(8) {
+	left: 70%;
+	animation-delay: 8s;
+}
+.wrapper span:nth-child(9) {
+	left: 80%;
+	animation-delay: 6s;
+	width: 90px;
+	height: 90px;
+}
+.wrapper span:nth-child(10) {
+	left: 90%;
+	animation-delay: 4s;
+}
+
+@keyframes animate {
+	0% {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	80% {
+		opacity: .7;
+	}
+	100% {
+		transform: translateY(-800px) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+  
+  .Lemon {
+    border-radius: 100px;
+    height: 100%;
+  }
+  
+  #active {
+    border-bottom: 2px solid orange;
+    color: #AE6152;
+  }
+  
+  .bn {
+    font-family: 'Anek Bangla';
+    font-weight: bold;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </style>
+</head>
+<body>
+  
+  
+  
+  <div class="wrapper">
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+</div>
+    <!-- Header -->
+    <header>
+      <div class="head">
+        <img src="https://gifdb.com/images/high/jerry-licking-lemon-recurring-daydream-2eo0jj95faexp0ns.webp" alt="logo">
+        <h1 lang="bn">হালকা কাগজীর সাথে ডাউনলোড এর মজা..</h1>
+      </div>
+    </header>
+  <section class="aut-datetime">
+    
+    <div class="infinity-slide">
+    <div class="date-time">
+  <caption lang="bn">|| এই Web Site টি ,
+    <time datetime="2025-10-25T06:09:00">মঙ্গলবার ২৯শে আশ্বিন ১৪৩২ বঙ্গাব্দ, সময় সন্ধে ০৬ বাজে ০৯ মিনিটে</time>  এ তৈরী করা হয়েছে ||
+  </caption>
+      </div>
+      </div>
+    
+    <caption lang="bn"> <p class="out-of">** ইনি developer লাইনে নতুন ত ওইযন্য creation credit টা আগেই লিছে..!</p> </caption>
+    <div class="background">
+      <div class="id-container">
+        <h4 class="cap-2">Site টি বানিয়েছেন,</h4>
+        <div class="aut-id">
+          <img src="https://i.ibb.co/SwR8BW1P/IMG-20251020-150509.jpg" class="id-photo" alt="AuthourPhoto">
+          <p class="aut-name">Ankit Singh</p>
+           </div>
+        </div>
+        
+        <div class="about">
+          <h4 lang="bn" class="cap">তবুও এনার নিয়ে দুই এক লাইন</h4>
+          <p class="line" lang="bn">
+ই হৈল এমন এক ছোঁড়া, যার বয়সটা মোটে ১৯ বছর পাইরাহীছে! 
+            <br><br>
+​দেখতে তো বেড়ে সজাসাপটা, লেকিন মাথার ভিতরে টেকনোলজির কারখানা চলে সারাখন।
+            <br><br>
+​ই সালা তো টুয়েলভটা কনহরকমে পার কইরেছে, শালা কনহরকমে ফেল হতে হতে বাইচেঁছে রে বাপ !!।
+            <br><br>
+​বাপ-মা'র কথা রাখতে যাইএ ঐ ওয়েল্ডার আইটিআইটা কইরেছে বঠে, লেকিন ওইটাই উয়ার মন নাই খে। উ ওইসব লুহালক্কর কাজ করার কনহ মরজি এই নাই !
+            <br><br>
+​উ হই ল আসলে কম্পিউটার-পাগলা লোক—যাঁর চিন্তা ভাবহ্ না সকইল যন্ত্রপাতির উপ রে।
+            <br><br>
+​মোবাইল, ক্যামরা, টেবলেট—ইসব গ্যাজেটের উপর উআর কইষে টান।
+            <br><br>
+আরো এদকে শুনি, উ ঐ কি কন্দিকে C++, Python, JavaScript-এর পারা কোডিং-এর ভাআষা তাষাও খেছরা খেচড়ি করে!
+            <br><br>
+​লেকিন কী কইরবে? উআর ঘরে ত কম্পিউটারটাই নাই খে! বাপ-মায়েরও ত সাধ্য নাই খে যে একটা কিইনে দিবেক।
+            <br><br>
+​তবুও শালা মোবাইলে কি কোনদিকে যে করে,
+            <br><br>
+​ই শালা টুকটাক ছবিও আইকে লেই, আর শালা  হালকার মধ্যে ঐ কি বলে গ্রাফিক্স ডিজাইন ন কি, উটাও করে।
+            <br><br>
+​মোবাইলই  চাঁদি ভিডিও  বানাই রে, হালকা-পাতলা অ্যনিমেশন ন কি বলে উটাও করে আর ঐ কি-ফ্রেমি টি ফ্রেম এর ও কিত্তি কাণ্ড কইরে বুলে।
+
+            <br><br>
+আর যখন মোবাইলে এ ফটে তুলে ন তখন উ ম্যানুয়াল মুড খুঁইজে বুলে। শালা ক্যামরা না থাইকলেও ISO, শাটার স্পিড, অ্যাপারচারের পুরা না থাকলেই ও মটামটি থিয়োরিটা পুরা জানে ।
+            <br><br>
+​ই হইল এমন এক ছিইলা, শালা ছট মট স্বপন দেখে।
+            <br><br>
+শালা স্বপনাছে  যে চাঁদি JavaScript ন কি একটা কম্পুটার নেটের ভাষা দিইএ শালা একটা কি  ফুল রেসপনসিভ  ওয়েবসাইট ন কি বলে , উটা বনাবেক বইলছে ত তারপর এখন কি করে উহেই জানে।
+            <br><br>
+            ​ই গাঁয়ের এক তারকাটা ছিলা, শালা এই বয়েসে অন্য ছিল পিলা পইসাপাতি কমাবার লাইগে হড়বড়াছে  ন ই শালা এদিকে মার মার উল্টা পাল্টা ভাবনা চিন্তায় মগ্ন আর শালা এদিকে বইলছে পইসা নাই অমুক নাই তসুক নাই, বাপ মাইয়ের হোটেলে শুধু ভাত মাইচ্ছে । হু.!!
+          </p>
+         </div>
+        </div>
+     </div>
+</section>
+  
+  <details>
+    <summary>See More</summary>
+    <div class="see-more-container">
+    <h5 class="link"><a href="https://uhdmovies.rip/" class="det-link">Download Ultra High Defination or 4K Movies</a></h5>
+    
+    <h5 class="link"><a href="https://9anime.org.lv/" class="det-link">Watch Anime online</a></h5>
+    
+    <h5 class="link"><a href="https://www.tpxsub.com/" class="det-link">Download Hindi Subtitle Anime</a></h5>
+    
+    <h5 class="link"><a href="#" class="det-link">Grab, how to creat own shearble download link</a> </h5>
+    
+    <h5 class="link"><a href="#" class="det-link">Grab, how to creat own basic website and host it free with github</a></h5>
+    
+    <h5>Learn how to create website without JavaScript</h5>
+    
+    <h5>Go to footer and contact me</h5>
+      </div>
+  </details>
+  
+  
+  
+    <main>
+   <div class="app-container">
+      <h2 class="content-subject">Apps</h2>
+      <hr>
+        <div class="Grid">
+          
+          <a class="Redirect-download" href="https://liteapks.com/download/lightroom-photo-video-editor-205/2">
+          <section class="app-content">
+          <div class="app">
+            <div class="app-logo"><img class="a-logo" src="https://liteapks.com/wp-content/uploads/2022/04/lightroom-photo-editor.png"></div>
+            
+            <div class="app-info">
+             <h4 class="app-name">Lightroom</h4>
+              <ul>
+                <li>
+                  <time datetime="2025-10-16T15:32:00">2025-10-16</time>
+                  
+                </li>
+                <li>v10.5.2 </li>
+              </ul>
+             </div>
+            
+          </div>
+            </section>
+              </a>
+            
+            
+            <a class="Redirect-download" href="https://liteapks.com/download/capcut-311/3">
+          
+     <section class="app-content">
+          <div class="app">
+            <div class="app-logo"><img class="a-logo" src="https://liteapks.com/wp-content/uploads/2022/04/capcut-video-editor.png"></div>
+            
+            <div class="app-info">
+             <h4 class="app-name">CapCut</h4>
+              <ul>
+                <li>
+                  <time datetime="2025-10-16T15:32:00">2025-10-16</time>
+                  
+                </li>
+                <li>v15.4.0 </li>
+              </ul>
+             </div>
+            
+          </div>
+            </section>
+                </a>
+              
+          
+          <a class="Redirect-download" href="https://liteapks.com/download/alight-motion-175/2">
+      <section class="app-content">
+          <div class="app">
+            <div class="app-logo"><img class="a-logo" src="https://liteapks.com/wp-content/uploads/2022/04/alight-motion.png"></div>
+            
+            <div class="app-info">
+             <h4 class="app-name">Alight Motion</h4>
+              <ul>
+                <li>
+                  <time datetime="2025-10-16T15:32:00">2025-10-16</time>
+                  
+                </li>
+                <li>v5.0.277 </li>
+              </ul>
+             </div>
+            
+          </div>
+            </section>
+              </a>
+            
+          
+          <a class="Redirect-download" href="https://liteapks.com/download/picsart-136/2">
+     <section class="app-content">
+          <div class="app">
+            <div class="app-logo"><img class="a-logo" src="https://liteapks.com/wp-content/uploads/2022/04/picsart-photo-video-editor.png"></div>
+            
+            <div class="app-info">
+             <h4 class="app-name">PicsArt</h4>
+              <ul>
+                <li>
+                  <time datetime="2025-10-16T15:32:00">2025-10-16</time>
+                  
+                </li>
+                <li>v28.6.7 </li>
+              </ul>
+             </div>
+            
+          </div>
+            </section>
+              </a>
+            
+          
+          <a class="Redirect-download" href="https://liteapks.com/download/fl-studio-mobile-6151/2">
+          <section class="app-content">
+          <div class="app">
+            <div class="app-logo"><img class="a-logo" src="https://liteapks.com/wp-content/uploads/2022/05/fl-studio-mobile.png"></div>
+            
+            <div class="app-info">
+             <h4 class="app-name">FL Studio</h4>
+              <ul>
+                <li>
+                  <time datetime="2025-10-16T15:32:00">2025-10-16</time>
+                  
+                </li>
+                <li>v4.8.10 </li>
+              </ul>
+             </div>
+            
+          </div>
+            </section>
+          </a>
+            
+          
+          <a class="Redirect-download" href="#">
+          <section class="app-content">
+          <div class="app">
+            
+            <div class="app-info">
+                <h3 class="see-more">See More</h3> 
+             </div>
+            
+          </div>
+            </section>
+            </a>
+        </div>
+     <div style="font-size: 0.8rem; margin: 20px;">
+     <caption>Sorce: <em>https://liteapks.com</em></caption> </div>
+        </div>
+    </main>
+  
+  
+  
+  
+  <div style="background-image: url('https://i.ibb.co/NnkqzgBP/IMG-20251028-093833-602.jpg'); border-radius: 20px; box-sizing: border-box;
+    height: 50vh; padding: 25px; margin: 10px;">
+    <h2 style=" margin: 10px; font-family: arial;";>Spaicel Request from (user:Anonymous) </h2>
+    
+    <hr>
+    
+    
+          <a class="Redirect-download" href="https://mega.nz/file/vIEgVSZQ#-87ejx4pyuTmvQ2flxosV0rOgig4nKp2ay2T3sG35iw">
+          <section class="app-content">
+          <div class="app">
+            <div class="app-logo"><img class="a-logo" style="border:1px rgba(255, 255, 255, 0.2);"src="https://image.winudf.com/v2/image1/Y29tLmxldHNhcHBidWlsZGVyX2ljb25fMTU4Njk2Nzk0MF8wNDU/icon.webp?w=360&fakeurl=1&type=.webp"></div>
+            
+            <div class="app-info">
+             <h4 class="app-name" style="color: black;">WebApp</h4>
+              <ul>
+                <li>
+                  <time datetime="2025-10-16T15:32:00">2025-10-16</time>
+                  
+                </li>
+                <li>v1.0 </li>
+              </ul>
+             </div>
+            
+          </div>
+            </section>
+          </a>
+    
+  </div>
+  
+  
+  
+
+    <!-- Footer -->
+    <footer>
+        <p class="copyright-snipht">&copy; 2025<sapn class="bn"> হালকা কাগজীর সঙ্গে পরিসেবা</span> All rights reserved.</p>
+      <hr>
+      <div class="foot">
+        
+        <nav>
+        <a href="#" target="_blank"><h6 id="active">Home</h6></a>
+        
+        <a href="Review.html" target="_blank"><h6>Review</h6></a>
+        
+        <a href="#" target="_blank"><h6>About</h6></a>
+        
+        <a href="Contect.html" target="_blank"><h6>Contect</h6></a>
+          </nav>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

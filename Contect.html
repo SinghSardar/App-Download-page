@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="Contact the developer for support, suggestions, or business inquiries via email.">
+    <meta name="keywords" content="contact, email, support, developer">
+    <meta name="author" content="Ankit Singh">
+
+    <title>My Website - Contact</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <meta property="og:title" content="My Website - Contact">
+    <meta property="og:description" content="Contact the developer for support, suggestions, or business inquiries via email.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/contact.html">
+    <meta property="og:image" content="https://example.com/image.jpg">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap" rel="stylesheet">
+  
+    <style>
+      /* --- GLOBAL STYLES & FOOTER FIX --- */
+      
+      /* FIX: Use Flexbox to pin the footer to the bottom */
+      body {
+        margin: 0px;
+        background: rgba(0, 0, 0, 0.98);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Takes up full screen height */
+      }
+      
+      .head {
+        display: flex;
+        flex-direction: row;
+        background-color: #D1A574;
+        align-items: center;
+        gap: 10px;
+        position: fixed;
+        width:100%;
+        margin-top: -1px;
+        z-index: 1000;
+        flex-shrink: 0;
+      }
+      
+      h1 {
+        color: #AE6152;
+        font-size: 1.3rem;
+        padding-top:5px;
+        font-family: "Noto Sans Bengali", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+      }
+      
+      img {
+        height: 80px;
+      }
+      
+      .infinity-slide {
+        background-color: #020F0B;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 2px;
+        position: fixed;
+        z-index: 999;
+        top: 80px;
+      }
+      
+      .date-time {
+        font-size: 1.5rem;
+        display: flex;
+        color: #FCFFFB;
+        white-space: nowrap;
+        animation: scroll-left 15s linear infinite;
+        font-family: "Noto Sans Bengali", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+      }
+      
+      @keyframes scroll-left {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-180%); }
+      }
+      
+      /* Lemon animation styles (keeping these consistent) */
+      .wrapper span { position: fixed; bottom: -100px; border-radius: 100px; height: 20px; width: 20px; z-index: -1; box-shadow: 0 0 50px #EAA82E, 0 0 100px #EAA82E, 0 0 150px #EAA82E, 0 0 200px #EAA82E; animation: animate 10s linear infinite; }
+      .wrapper span:nth-child(1) { left: 60px; animation-delay: 0.6s; }
+      .wrapper span:nth-child(2) { left: 10%; animation-delay: 3s; width: 60px; height: 60px; }
+      .wrapper span:nth-child(3) { left: 20%; animation-delay: 2s; }
+      .wrapper span:nth-child(4) { left: 30%; animation-delay: 5s; width: 80px; height: 80px; }
+      .wrapper span:nth-child(5) { left: 40%; animation-delay: 1s; }
+      .wrapper span:nth-child(6) { left: 50%; animation-delay: 7s; }
+      .wrapper span:nth-child(7) { left: 60%; animation-delay: 6s; width: 100px; height: 100px; }
+      .wrapper span:nth-child(8) { left: 70%; animation-delay: 8s; }
+      .wrapper span:nth-child(9) { left: 80%; animation-delay: 6s; width: 90px; height: 90px; }
+      .wrapper span:nth-child(10) { left: 90%; animation-delay: 4s; }
+      @keyframes animate { 0% { transform: translateY(0); opacity: 1; } 80% { opacity: .7; } 100% { transform: translateY(-800px) rotate(360deg); opacity: 0; } }
+      .Lemon { border-radius: 100px; height: 100%; }
+      
+      /* Ensure main content takes up remaining space and pushes footer */
+      main.contact-page {
+        flex-grow: 1; 
+        padding: 100px 20px 20px 20px;
+        color: white;
+      }
+
+      footer {
+        flex-shrink: 0; /* Prevents footer from shrinking */
+        backdrop-filter: blur(10px);
+        background-image: url('https://gifdb.com/images/high/lemon-dropping-animation-ycxzi603s8htpcgq.webp');
+        opacity: 0.8;
+        padding: 12px 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin: 10px 10px;
+        margin-bottom: 0px;
+        padding-bottom: 20px;
+      }
+      
+      .copyright-snipht {
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      
+      h6 {
+        font-size: 1.3rem;
+        text-align: center;
+        margin: 0px;
+      }
+      
+      nav, .foot {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 0px 0px;
+        padding: 0px 0px;
+      }
+      
+      a {
+        text-decoration: none;
+        color: white; 
+        cursor: pointer;
+      }
+      
+      a:hover {
+        color: #EBA833;
+      }
+      
+      .bn {
+        font-family: 'Anek Bangla';
+        font-weight: bold;
+      }
+      
+      #active {
+        border-bottom: 2px solid orange;
+        color: #AE6152;
+      }
+      
+      hr { border: none; border: 0.5px solid rgba(255, 255, 255, 0.2); }
+
+      /* --- NEW CONTACT PAGE STYLES --- */
+      
+      .contact-container {
+        padding: 20px;
+        border-radius: 15px;
+        background-color: rgba(255, 255, 255, 0.08);
+        text-align: center;
+        backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      
+      .contact-container h2 {
+          font-family: "Noto Sans Bengali", sans-serif;
+          color: #D1A574;
+          font-size: 2rem;
+          margin-bottom: 10px;
+      }
+
+      .contact-info p {
+          font-size: 1rem;
+          margin-bottom: 20px;
+          color: #ccc;
+      }
+
+      .email-button {
+          display: block;
+          width: 100%;
+          padding: 15px 10px;
+          margin-top: 20px;
+          border-radius: 10px;
+          background-color: #AE6152; 
+          color: white;
+          text-decoration: none;
+          font-size: 1.2rem;
+          font-weight: bold;
+          transition: background-color 0.3s, transform 0.1s;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+          border: 1px solid #EAA82E;
+      }
+
+      .email-button:hover {
+          background-color: #D1A574; 
+          transform: translateY(-2px);
+          color: #000;
+      }
+      
+      .email-button i {
+          margin-right: 10px;
+      }
+      
+    </style>
+</head>
+<body>
+  
+  
+  
+  <div class="wrapper">
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+		<span><img src="https://i.ibb.co/60xCVmXT/IMG-20251027-200253-084.jpg" class="Lemon"></span>
+  </div>
+    <header>
+      <div class="head">
+        <img src="https://gifdb.com/images/high/jerry-licking-lemon-recurring-daydream-2eo0jj95faexp0ns.webp" alt="logo">
+        <h1 lang="bn">হালকা কাগজীর সাথে যোগাযোগ এর মজা..</h1>
+      </div>
+    </header>
+  
+    <main class="contact-page">
+      <div class="contact-container">
+          
+          <h2 lang="bn">যোগাযোগ করুন</h2>
+          <hr>
+          
+          <div class="contact-info">
+              <p lang="bn">
+                আপনার কোনো প্রশ্ন, সমস্যা, পরামর্শ, বা ব্যবসায়িক অনুরোধ থাকলে, নিচে দেওয়া বাটনটি ব্যবহার করে সরাসরি ইমেইল করুন। 
+                আপনার মোবাইল ডিভাইস সরাসরি আপনার মেইল অ্যাপে রিডাইরেক্ট করবে।
+              </p>
+              
+              <p lang="bn" style="font-style: italic; color: #EBA833;">
+                অনুগ্রহ করে আপনার নাম ও ফোন নাম্বার উল্লেখ করুন।
+              </p>
+              
+              <a href="mailto:1sardar.yt@gmail.com?subject=Inquiry%20from%20My%20Website&body=Name%3A%0AContact%20%23%3A%0A%0AMessage%3A%0A%0A(Please%20do%20not%20delete%20the%20pre-filled%20text)" 
+                 class="email-button" 
+                 lang="bn">
+                 <i class="fas fa-envelope"></i> ইমেইল করার জন্য ক্লিক করুন
+              </a>
+              
+          </div>
+          
+      </div>
+    </main>
+
+    <footer>
+        <p class="copyright-snipht">&copy; 2025<span class="bn"> হালকা কাগজীর সঙ্গে পরিসেবা</span> All rights reserved.</p>
+      <hr>
+      <div class="foot">
+        
+                <nav>
+        <a href="index.html"><h6>Home</h6></a>
+        
+        <a href="review.html"><h6>Review</h6></a>
+        
+        <a href="about.html"><h6>About</h6></a>
+        
+        <a href="Contect.html" id="active"><h6>Contect</h6></a>
+          </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="Discover the purpose of the website and meet Ankit Singh, the developer and creator.">
+    <meta name="keywords" content="Ankit Singh, developer story, about website purpose, content sharing, free resource">
+    <meta name="author" content="Ankit Singh">
+
+    <title>My Website - About</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap" rel="stylesheet">
+  
+    <style>
+    /* --- GLOBAL STYLES & FOOTER FIX (Keep this section from your previous files) --- */
+
+    /* FIX: Use Flexbox to pin the footer to the bottom */
+    body {
+        margin: 0px;
+        background: rgba(0, 0, 0, 0.98);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Takes up full screen height */
+        font-family: Arial, sans-serif; /* Added a default English font */
+    }
+
+    .head {
+        display: flex;
+        flex-direction: row;
+      align-items: center;
+      justify-content: center;
+        width:100%;
+        z-index: 1000;
+        flex-shrink: 0;
+      backdrop-filter: blur( 500px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    
+    }
+
+    h1 {
+      text-align: center;
+      text-shadow: 0px 0px 15px gray;
+        color: #fff;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(100px);
+      border-radius: 50px;
+      padding: 20px 40px;
+        font-size: 1.9rem;
+        font-family: "Noto Sans Bengali", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 1000;
+        font-style: normal;
+        font-variation-settings: "wdth" 100;
+    }
+
+    img {
+        height: 80px;
+    }
+    
+  /*  .infinity-slide {
+        background-color: #020F0B;
+        width: 100%;
+        overflow: hidden;
+        padding-top: 2px;
+        position: fixed;
+        z-index: 999;
+        top: 80px;
+    }
+    
+    .date-time {
+        font-size: 1.5rem;
+        display: flex;
+        color: #FCFFFB;
+        white-space: nowrap;
+        animation: scroll-left 15s linear infinite;
+        font-family: "Noto Sans Bengali", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+    }
+
+    @keyframes scroll-left {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-180%); }
+    }
+    /* Lemon animation styles (Keeping these for visual consistency) */
+    .wrapper span { 
+      border-radius: 50px;
+      background: #EAA82E;position: fixed; bottom: 1000px; height: 50px; width: 50px; z-index: -1; box-shadow: 0 0 50px #EAA82E, 0 0 100px #EAA82E, 0 0 150px #EAA82E, 0 0 200px #EAA82E; animation: animate 20s linear infinite; }
+    .wrapper span:nth-child(1) { left: 60px; animation-delay: 0.6s; }
+    .wrapper span:nth-child(2) { left: 10%; animation-delay: 3s; width: 60px; height: 60px; }
+    .wrapper span:nth-child(3) { left: 20%; animation-delay: 2s; }
+    .wrapper span:nth-child(4) { left: 30%; animation-delay: 5s; width: 80px; height: 80px; }
+    .wrapper span:nth-child(5) { left: 40%; animation-delay: 1s; }
+    .wrapper span:nth-child(6) { left: 50%; animation-delay: 7s; }
+    .wrapper span:nth-child(7) { left: 60%; animation-delay: 6s; width: 100px; height: 100px; }
+    .wrapper span:nth-child(8) { left: 70%; animation-delay: 8s; }
+    .wrapper span:nth-child(9) { left: 80%; animation-delay: 6s; width: 90px; height: 90px; }
+    .wrapper span:nth-child(10) { left: 90%; animation-delay: 4s; }
+    @keyframes animate { 0% { transform: translateY(0); opacity: 1; } 80% { opacity: .7; } 100% { transform: translateY(1000px) rotate(360deg); opacity: 0; } }
+  
+
+    /* Main content container pushes footer down */
+    main {
+        flex-grow: 1; 
+        padding-top: 15px; /* Adjust for fixed header and slide */
+        color: white;
+        padding-bottom: 30px; /* Space above footer */
+    }
+    
+    /* --- ABOUT PAGE STYLES (NEW) --- */
+    
+    .about-container {
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .developer-profile {
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 30px;
+      backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.08);
+        border-radius: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .developer-profile h2 {
+        color: #D1A574;
+        font-size: 2.2rem;
+        margin-top: 10px;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #AE6152;
+      box-shadow: 0 0px 25px 5px #AE6152;
+        margin-bottom: 10px;
+    }
+
+    .content-block {
+        margin-bottom: 30px;
+        padding: 25px;
+        background-color: #E4E6E6;
+        border-radius: 10px;
+        color: #0D2852;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .content-block h3 {
+        color: #AE6152;
+        border-bottom: 2px solid #D1A574;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+    }
+    
+    .content-block p {
+        line-height: 1.6;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        text-align: justify;
+    }
+    
+    /* Footer styles from previous file (Ensure they are consistent) */
+    footer {
+        flex-shrink: 0; 
+        backdrop-filter: blur(100px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.15);
+        padding: 12px 0px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        margin: 10px 10px;
+        margin-bottom: 0px;
+        padding-bottom: 20px;
+    }
+
+    .copyright-snipht { text-align: center; font-size: 1.2rem; color: #EBA833; 
+      text-shadow: 2px 0px 15px #EBA833;
+    }
+    h6 { font-size: 1.3rem; text-align: center; margin: 0px; }
+    nav, .foot { display: flex; justify-content: center; align-items: center; gap: 20px; margin: 0px; padding: 0px; }
+    a { text-decoration: none; color: white; cursor: pointer; }
+    a:hover { color: #EBA833; }
+    .bn { font-family: 'Anek Bangla'; font-weight: bold; }
+    #active { border-bottom: 2px solid orange; color: #AE6152; }
+    hr { border: none; border: 0.5px solid rgba(255, 255, 255, 0.2); }
+    
+    </style>
+</head>
+<body>
+  
+  <div class="wrapper">
+		   <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+		
+  </div>
+    <header>
+      <div class="head">
+        <h1 lang="bn">হালকা আমাদের ব্যাপারে মজা..</h1>
+      </div>
+    </header>
+
+    <main>
+        <div class="about-container">
+            
+            <div class="developer-profile">
+                <img src="https://i.ibb.co/SwR8BW1P/IMG-20251020-150509.jpg" class="profile-photo" alt="Developer Photo">
+                <h2>Ankit Singh</h2>
+                <p style="color:#AE6152;">** A New Developer: Creation Credit is Taken in Advance! **</p>
+                <hr style="border-color: rgba(255, 255, 255, 0.4);">
+                <p style="font-size:1.1rem; color:#ccc;">
+                    The site was created on 
+                    <time datetime="2025-10-25T06:09:00">Tuesday, October 28, 2025, at 6:09 PM</time>.
+                </p>
+            </div>
+            
+            <div class="content-block">
+                <h3>My Core Purpose: Fun Downloads and to Provide You Some-short Usefull Stuffs</h3>
+                <p>
+                    This website, aptly titled (হালকা কাগজীর সাথে পরিসেবা), serves as a dedicated resource hub focused on providing accessible and engaging content for mobile users. The primary goal is to curate a collection of valuable resources, tools, and entertainment links in a **simple, responsive, and data-friendly format**.
+                </p>
+                <p>
+                    In an age where digital access can be complicated or data-intensive, this platform aims to be a **"light paper"**—easy to load, easy to navigate, and focused purely on utility. Whether you are looking for links to HD movies, subtitle files, animation tutorials, or the latest lite versions of mobile editing apps, this site gathers those threads into one clear, centralized location.
+                </p>
+                <p>
+                    My Mission is two-fold: **To Simplify** the process of finding and accessing digital resources, and **To Inspire** creativity by highlighting useful mobile tools that enable users to create their own graphics, videos, and music right from their smartphone.
+                </p>
+            </div>
+
+            <div class="content-block">
+                <h3>The Developer's Story: Ankit Singh</h3>
+                <p>
+                    The site is the creation of **Ankit Singh**, a young enthusiast barely nineteen years old, whose mind is constantly churning with ideas for technology. While he completed his vocational ITI education to honor his parents' wishes, his true passion lies entirely within the digital world of computers and creative gadgets.
+                </p>
+                <p>
+                    Despite facing the major hurdle of not owning a personal computer—a challenge common for aspiring developers in his area—Ankit is a self-taught, smartphone-first creator. He uses his mobile device to learn C++, Python, and JavaScript, piecing together complex coding concepts wherever he can.
+                </p>
+                <p>
+                    This website is the direct result of his personal dream: to use his mobile learning to build a fully responsive, useful website for the community. The "Apps" section, which features mobile video and photo editors, reflects his skills in phone-based graphic design, animation, and manual photography theory—all learned without a professional camera or computer.
+                </p>
+                <p>
+                    Ankit represents the spirit of making the most of limited resources. He created this site not for monetary gain, but to share knowledge, demonstrate his growing skills, and fulfill a passion. This platform is a testament to what a dedicated young mind can achieve with just a smartphone and a powerful vision.
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="copyright-snipht">&copy; 2025<span class="bn"> হালকা কাগজীর সঙ্গে পরিসেবা</span> All rights reserved.</p>
+        <hr>
+        <div class="foot">
+        <nav>
+        <a href="index.html"><h6>Home</h6></a>
+        
+        <a href="review.html"><h6>Review</h6></a>
+        
+        <a href="about.html" id="active"><h6>About</h6></a>
+        
+        <a href="Contect.html"><h6>Contect</h6></a>
+          </nav>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
